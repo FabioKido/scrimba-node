@@ -1,0 +1,12 @@
+{
+  "name": "scrimba-node",
+  "version": "1.0.0",
+  "description": "Curso de node no scrimba",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "FabioKido",
+  "license": "ISC"
+}
