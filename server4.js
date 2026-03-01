@@ -11,8 +11,8 @@ const server = http.createServer(async (req, res) => {
 
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
     const queryObj = Object.fromEntries(urlObj.searchParams);
-
-    if (urlObj.pathname === '/api' && req.method === 'GET') {
+    
+    if (urlObj.pathname === '/api' && req.method === 'GET') { // Usa-se .pathname para pegar o caminho relativo e não o completo. O completo não faz o if funcionar do jeito esperado.
 
         let filteredData = getDataByQueryParams(destinations, queryObj);
         sendJSONResponse(res, 200, filteredData);
